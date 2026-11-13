@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0A0912">
+<title>Supernova Lounge — меню</title>
+<meta name="description" content="Меню Supernova Lounge: паровые коктейли, чайная карта, бар, лимонады и кухня.">
+<meta property="og:title" content="Supernova Lounge — меню">
+<meta property="og:description" content="Паровые коктейли, чайная карта, бар и кухня.">
+<meta property="og:image" content="assets/og.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="spark" viewBox="0 0 24 24"><path d="M12 0C12.7 8.4 15.6 11.3 24 12C15.6 12.7 12.7 15.6 12 24C11.3 15.6 8.4 12.7 0 12C8.4 11.3 11.3 8.4 12 0Z"/></symbol>
+  </defs>
+</svg>
+
+<header class="hero" id="top">
+  <div class="sky" aria-hidden="true"></div>
+  <div class="planet" aria-hidden="true"><span class="planet-ring"></span><span class="planet-body"></span><span class="planet-ring front"></span></div>
+  <img class="astro" src="assets/astronaut.webp" alt="" width="400" height="324" aria-hidden="true" draggable="false">
+  <svg class="hero-spark s1" aria-hidden="true"><use href="#spark"/></svg>
+  <svg class="hero-spark s2" aria-hidden="true"><use href="#spark"/></svg>
+  <svg class="hero-spark s3" aria-hidden="true"><use href="#spark"/></svg>
+
+  <div class="hero-in">
+    <p class="hero-status" id="status"><span class="dot"></span><span id="statusText">Открыто</span></p>
+    <h1 class="hero-logo"><img src="assets/logo.webp" alt="Supernova Lounge" width="1100" height="840" fetchpriority="high"></h1>
+    <p class="hero-sub">Кальяны <i>·</i> чай <i>·</i> бар <i>·</i> кухня</p>
+    <a class="hero-cta" href="#menu">Открыть меню
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+    </a>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+<section class="offers" aria-label="Акции">
+  <article class="offer offer-main" id="offerNov">
+    <p class="offer-kicker">Весь ноябрь</p>
+    <p class="offer-big">−15<span>%</span></p>
+    <p class="offer-text">на любой счёт</p>
+    <svg class="offer-spark" aria-hidden="true"><use href="#spark"/></svg>
+  </article>
+  <article class="offer offer-alt">
+    <p class="offer-kicker">Ежедневно <b>12:00 — 17:00</b></p>
+    <p class="offer-title">Горячий напиток <em>в подарок</em></p>
+    <p class="offer-text">при заказе кальяна</p>
+    <p class="offer-live" id="happyLive" hidden>Сейчас действует</p>
+  </article>
+</section>
+
+<nav class="bar" id="bar" aria-label="Разделы меню">
+  <div class="bar-in">
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <button class="search-btn" id="searchBtn" type="button" aria-label="Поиск по меню" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+    </button>
+  </div>
+  <div class="search" id="search" hidden>
+    <input id="q" type="search" placeholder="Найти вкус, чай или блюдо" aria-label="Поиск по меню" autocomplete="off" spellcheck="false">
+    <button class="search-close" id="searchClose" type="button" aria-label="Закрыть поиск">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main id="menu" class="menu"></main>
+<p class="empty" id="empty" hidden>Ничего не нашли. Попробуйте «манго», «улун» или «ролл».</p>
+
+<footer class="foot">
+  <div class="foot-brand">
+    <img src="assets/mark.svg" alt="" width="74" height="60">
+    <p><span class="wm">SUPERNOVA</span><span class="wm-sub">lounge</span></p>
+  </div>
+  <div class="foot-hours">
+    <h2>Режим работы</h2>
+    <dl>
+      <div><dt>Вс — Чт</dt><dd>12:00 — 00:00</dd></div>
+      <div><dt>Пт — Сб</dt><dd>12:00 — 02:00</dd></div>
+    </dl>
+  </div>
+  <p class="foot-note">Цены указаны в рублях. Уточняйте наличие позиций у официанта.</p>
+  <a class="foot-top" href="#top">Наверх ↑</a>
+</footer>
+
+<script src="menu.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
