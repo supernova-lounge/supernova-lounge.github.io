@@ -20,7 +20,7 @@ window.MENU = [
     name: "Чайная карта",
     lead: "Классика, ароматные чаи и фирменный Supernova — к кальяну и к долгому разговору.",
     subs: [
-      { name: "Фирменный", signature: true, items: [
+      { name: "Фирменный", items: [
         ["Supernova чай", "300 мл", 300],
       ]},
       { name: "Классические", items: [
