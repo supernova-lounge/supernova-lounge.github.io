@@ -98,7 +98,7 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .hero-status .dot { width: 7px; height: 7px; border-radius: 50%; background: #5BE3A4; box-shadow: 0 0 0 4px rgba(91, 227, 164, .14); }
 .hero-status.closed .dot { background: var(--dim); box-shadow: none; }
-.hero-logo { width: min(420px, 86vw); }
+.hero-logo { width: min(640px, 96vw); }
 .hero-logo img { width: 100%; height: auto; }
 .hero-sub {
   margin-top: 18px; font: italic 400 21px/1.2 var(--serif); color: var(--violet-hi); letter-spacing: .02em;
@@ -269,11 +269,11 @@ body.searching .cat { padding-top: 32px; }
   border-top: 1px solid var(--line);
   display: grid; gap: 28px;
 }
-.foot-brand { display: flex; align-items: center; gap: 16px; }
-.foot-brand img { width: 64px; height: auto; }
+.foot-brand { display: flex; align-items: center; gap: 20px; }
+.foot-brand img { width: 100px; height: auto; }
 .foot-brand p { display: flex; flex-direction: column; line-height: 1; }
-.wm { font-size: 22px; font-weight: 300; letter-spacing: .14em; }
-.wm-sub { margin-top: 4px; font-size: 16px; font-weight: 300; letter-spacing: .08em; color: var(--muted); }
+.wm { font-size: 36px; font-weight: 300; letter-spacing: .14em; }
+.wm-sub { margin-top: 6px; font-size: 24px; font-weight: 300; letter-spacing: .08em; color: var(--muted); }
 .foot-hours h2 { font-size: 12px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
 .foot-hours dl { margin: 0; }
 .foot-hours dl div { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 18px; font-weight: 300; }
