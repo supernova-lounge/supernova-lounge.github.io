@@ -312,3 +312,7 @@ body.searching .cat { padding-top: 32px; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* сноски под подразделами */
+.sub-note { margin-top: 12px; font: italic 400 16px/1.4 var(--serif); color: var(--dim); }
+.sigs + .sub-note { margin-top: 14px; }

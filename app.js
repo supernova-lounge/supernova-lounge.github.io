@@ -22,7 +22,7 @@
   /* ---------- Рендер ---------- */
   function row(it, n) {
     const [name, desc, price] = it;
-    return `<li class="item"><div class="item-line"><span class="item-n">${pad(n)}</span><h4 class="item-name">${esc(name)}</h4><span class="leader"></span><span class="item-price">${rub(price)}<small>₽</small></span></div><p class="item-desc">${esc(desc)}</p></li>`;
+    return `<li class="item"><div class="item-line"><span class="item-n">${pad(n)}</span><h4 class="item-name">${esc(name)}</h4><span class="leader"></span><span class="item-price">${rub(price)}<small>₽</small></span></div>${desc ? `<p class="item-desc">${esc(desc)}</p>` : ""}</li>`;
   }
   function sig(it, n) {
     const [name, desc, price] = it;
@@ -30,9 +30,11 @@
   }
   function sub(s) {
     const body = s.signature
-      ? `<ul class="sigs">${s.items.map((it, i) => sig(it, i + 1)).join("")}</ul>`
+      ? `<ul class="sigs${s.items.length === 1 ? " one" : ""}">${s.items.map((it, i) => sig(it, i + 1)).join("")}</ul>`
       : `<ul class="items">${s.items.map((it, i) => row(it, i + 1)).join("")}</ul>`;
-    return `<section class="sub${s.signature ? " is-sig" : ""}"><h3 class="sub-title">${s.signature ? '<span class="tag">Фирменное</span>' : ""}${esc(s.name)}<span class="sub-count">${s.items.length}</span></h3>${body}</section>`;
+    const head = s.name ? `<h3 class="sub-title">${s.tag ? `<span class="tag">${esc(s.tag)}</span>` : ""}${esc(s.name)}<span class="sub-count">${s.items.length}</span></h3>` : "";
+    const note = s.note ? `<p class="sub-note">${esc(s.note)}</p>` : "";
+    return `<section class="sub${s.signature ? " is-sig" : ""}">${head}${body}${note}</section>`;
   }
   function render(term = "") {
     let shown = 0;
